@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { Search, X, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
+import { brandConfig } from '@/brand.config';
 
 export default function Navbar() {
     const [isAboutOpen, setIsAboutOpen] = useState(false);
@@ -30,7 +31,7 @@ export default function Navbar() {
             {/* Alert Bar */}
             <div className="bg-[#FADCD3] text-[#5A2D22] px-6 py-2.5 flex items-center justify-between text-xs font-medium relative">
                 <div className="w-full text-center">
-                    We'll never ask for payment, passwords, or personal info you don't choose to share. Stay alert.
+                    {brandConfig.alerts.security}
                 </div>
                 <button className="absolute right-6 text-[#5A2D22]/70 hover:text-[#5A2D22] transition-colors">
                     <X className="h-4 w-4" />
@@ -42,7 +43,7 @@ export default function Navbar() {
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-2 group">
                     <span className="text-2xl font-bold tracking-tight text-white">
-                        <span className="text-blue-500">chain</span>abuse
+                        <span className="text-blue-500">{brandConfig.logo.prefix}</span>{brandConfig.logo.suffix}
                     </span>
                 </Link>
 

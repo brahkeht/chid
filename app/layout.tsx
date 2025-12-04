@@ -1,22 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import { brandConfig } from "@/brand.config";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
-  title: "Chainabuse - Report Crypto Scams",
-  description: "Making the crypto ecosystem safer by empowering the community to report and track malicious activity.",
+  title: `${brandConfig.name} - ${brandConfig.tagline}`,
+  description: brandConfig.description,
 };
 
 export default function RootLayout({
@@ -27,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-[#020410] text-white font-sans selection:bg-primary/30`}
+        className={`${inter.variable} antialiased min-h-screen bg-[#020410] text-white font-sans selection:bg-primary/30`}
       >
         <Navbar />
         {children}

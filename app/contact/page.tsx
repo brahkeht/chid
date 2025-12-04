@@ -2,6 +2,7 @@
 
 import { Search } from 'lucide-react';
 import Link from 'next/link';
+import { brandConfig } from '@/brand.config';
 
 export default function ContactPage() {
     return (
@@ -38,7 +39,7 @@ export default function ContactPage() {
                                 You can report scams <Link href="/report" className="text-blue-500 hover:text-blue-400 underline">here</Link>. If you're a victim seeking support, please report your case <Link href="/report" className="text-blue-500 hover:text-blue-400 underline">here</Link> and opt-in at the form's bottom for quicker help. No need to contact us.
                             </p>
                             <p>
-                                For existing report inquiries, please email <a href="mailto:support@chainabuse.com" className="text-blue-500 hover:text-blue-400 underline">support@chainabuse.com</a>.<br />
+                                For existing report inquiries, please email <a href={`mailto:${brandConfig.contact.email.support}`} className="text-blue-500 hover:text-blue-400 underline">{brandConfig.contact.email.support}</a>.<br />
                                 Our <Link href="/faq" className="text-blue-500 hover:text-blue-400 underline">FAQs</Link> covers most questions. Thank you.
                             </p>
                         </div>

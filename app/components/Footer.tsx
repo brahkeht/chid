@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Twitter, Linkedin, Github, Shield } from 'lucide-react';
+import { brandConfig } from '@/brand.config';
 
 export default function Footer() {
     return (
@@ -11,19 +12,19 @@ export default function Footer() {
                             <div className="relative flex items-center justify-center">
                                 <Shield className="h-6 w-6 text-white" fill="currentColor" />
                             </div>
-                            <span className="text-xl font-bold tracking-tight text-white">chainabuse</span>
+                            <span className="text-xl font-bold tracking-tight text-white">{brandConfig.nameFormatted}</span>
                         </Link>
                         <p className="text-gray-400 text-sm mb-8 max-w-xs leading-relaxed">
-                            Making the crypto ecosystem safer by empowering the community to report and track malicious activity.
+                            {brandConfig.description}
                         </p>
                         <div className="flex items-center gap-5">
-                            <Link href="#" className="text-gray-500 hover:text-white transition-colors">
+                            <Link href={brandConfig.social.twitter} className="text-gray-500 hover:text-white transition-colors">
                                 <Twitter className="h-5 w-5" />
                             </Link>
-                            <Link href="#" className="text-gray-500 hover:text-white transition-colors">
+                            <Link href={brandConfig.social.linkedin} className="text-gray-500 hover:text-white transition-colors">
                                 <Linkedin className="h-5 w-5" />
                             </Link>
-                            <Link href="#" className="text-gray-500 hover:text-white transition-colors">
+                            <Link href={brandConfig.social.github} className="text-gray-500 hover:text-white transition-colors">
                                 <Github className="h-5 w-5" />
                             </Link>
                         </div>
@@ -62,7 +63,7 @@ export default function Footer() {
 
                 <div className="border-t border-white/5 pt-10 flex flex-col md:flex-row items-center justify-between gap-6">
                     <p className="text-sm text-gray-500">
-                        &copy; {new Date().getFullYear()} Chainabuse. All rights reserved.
+                        {brandConfig.legal.copyright(new Date().getFullYear())}
                     </p>
                     <div className="flex items-center gap-8">
                         <Link href="#" className="text-sm text-gray-500 hover:text-white transition-colors">Privacy Policy</Link>

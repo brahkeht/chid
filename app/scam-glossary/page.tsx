@@ -3,6 +3,7 @@
 import { Search } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
+import { brandConfig } from '@/brand.config';
 
 const tabs = [
     { id: 'blackmail', label: 'Blackmail' },
@@ -178,8 +179,8 @@ export default function ScamGlossaryPage() {
                                 key={tab.id}
                                 onClick={() => setActiveTab(tab.id)}
                                 className={`px-8 py-4 text-sm font-medium whitespace-nowrap transition-colors relative ${activeTab === tab.id
-                                        ? 'text-white'
-                                        : 'text-gray-400 hover:text-white'
+                                    ? 'text-white'
+                                    : 'text-gray-400 hover:text-white'
                                     }`}
                             >
                                 {tab.label}
@@ -228,7 +229,7 @@ export default function ScamGlossaryPage() {
                 <div className="mt-24 text-center">
                     <p className="text-gray-400 text-sm mb-6">
                         If you have any feedback or additions to this list, please contact us at<br />
-                        hello@chainabuse.com, or through the form available on the link below.
+                        {brandConfig.contact.email.hello}, or through the form available on the link below.
                     </p>
                     <Link href="/contact" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs px-8 py-3 rounded uppercase tracking-wide transition-colors">
                         CONTACT US
