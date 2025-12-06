@@ -49,6 +49,22 @@ export const brandConfig = {
         api: 'https://api.chainaid.com',
     },
 
+    // Internal Routes
+    routes: {
+        home: '/',
+        report: '/report',
+        leaderboard: '/leaderboard',
+        reports: '/reports',
+        successStories: '/success-stories',
+        about: '/about',
+        faq: '/faq',
+        glossary: '/scam-glossary',
+        contact: '/contact',
+        login: '/login',
+        register: '/register',
+        dashboard: '/dashboard',
+    },
+
     // Legal
     legal: {
         copyright: (year: number) => `© ${year} chainaid. All rights reserved.`,

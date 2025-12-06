@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+import { brandConfig } from '@/brand.config';
 
 export default function Hero() {
     return (
@@ -16,14 +17,14 @@ export default function Hero() {
                         <span className="text-gradient">crypto activity</span>
                     </h1>
                     <p className="text-lg md:text-xl text-gray-400 mb-10 max-w-lg leading-relaxed font-light">
-                        The company dedicated to helping you detect and recover from crypto frauds and scams.
+                        {brandConfig.description}
                     </p>
                     <div className="flex flex-col sm:flex-row gap-5">
-                        <Link href="#" className="btn-primary flex items-center justify-center gap-2 group text-[15px]">
+                        <Link href={brandConfig.routes.report} className="btn-primary flex items-center justify-center gap-2 group text-[15px]">
                             Report Incident
                             <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                         </Link>
-                        <Link href="#" className="btn-outline flex items-center justify-center text-[15px]">
+                        <Link href={brandConfig.routes.about} className="btn-outline flex items-center justify-center text-[15px]">
                             Learn More
                         </Link>
                     </div>

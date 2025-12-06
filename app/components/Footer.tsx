@@ -8,7 +8,7 @@ export default function Footer() {
             <div className="container-custom">
                 <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 mb-20">
                     <div className="col-span-2 lg:col-span-2 pr-8">
-                        <Link href="/" className="flex items-center gap-2.5 mb-6 group">
+                        <Link href={brandConfig.routes.home} className="flex items-center gap-2.5 mb-6 group">
                             <div className="relative flex items-center justify-center">
                                 <Shield className="h-6 w-6 text-white" fill="currentColor" />
                             </div>
@@ -33,9 +33,9 @@ export default function Footer() {
                     <div>
                         <h3 className="font-bold text-white mb-6">Platform</h3>
                         <ul className="space-y-4">
-                            <li><Link href="#" className="text-sm text-gray-400 hover:text-primary transition-colors">Report Scam</Link></li>
+                            <li><Link href={brandConfig.routes.report} className="text-sm text-gray-400 hover:text-primary transition-colors">Report Scam</Link></li>
                             <li><Link href="#" className="text-sm text-gray-400 hover:text-primary transition-colors">Check Address</Link></li>
-                            <li><Link href="#" className="text-sm text-gray-400 hover:text-primary transition-colors">API Access</Link></li>
+                            <li><Link href={brandConfig.urls.api} className="text-sm text-gray-400 hover:text-primary transition-colors">API Access</Link></li>
                             <li><Link href="#" className="text-sm text-gray-400 hover:text-primary transition-colors">Enterprise</Link></li>
                         </ul>
                     </div>
@@ -46,17 +46,17 @@ export default function Footer() {
                             <li><Link href="#" className="text-sm text-gray-400 hover:text-primary transition-colors">Blog</Link></li>
                             <li><Link href="#" className="text-sm text-gray-400 hover:text-primary transition-colors">Research</Link></li>
                             <li><Link href="#" className="text-sm text-gray-400 hover:text-primary transition-colors">Support</Link></li>
-                            <li><Link href="#" className="text-sm text-gray-400 hover:text-primary transition-colors">FAQ</Link></li>
+                            <li><Link href={brandConfig.routes.faq} className="text-sm text-gray-400 hover:text-primary transition-colors">FAQ</Link></li>
                         </ul>
                     </div>
 
                     <div>
                         <h3 className="font-bold text-white mb-6">Company</h3>
                         <ul className="space-y-4">
-                            <li><Link href="#" className="text-sm text-gray-400 hover:text-primary transition-colors">About Us</Link></li>
+                            <li><Link href={brandConfig.routes.about} className="text-sm text-gray-400 hover:text-primary transition-colors">About Us</Link></li>
                             <li><Link href="#" className="text-sm text-gray-400 hover:text-primary transition-colors">Careers</Link></li>
                             <li><Link href="#" className="text-sm text-gray-400 hover:text-primary transition-colors">Legal</Link></li>
-                            <li><Link href="#" className="text-sm text-gray-400 hover:text-primary transition-colors">Contact</Link></li>
+                            <li><Link href={brandConfig.routes.contact} className="text-sm text-gray-400 hover:text-primary transition-colors">Contact</Link></li>
                         </ul>
                     </div>
                 </div>
